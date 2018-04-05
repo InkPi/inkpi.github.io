@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Linda Zhou's portfolio</title>
+    <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+  <div id="maincontainer">
+      <div class="overlap">  
+      <a href="index.html"><img src="imgfolder/iconlogo.png"></a>
+    </div>
+    <div id="nav">
+      <li><a href="AboutMe.html">About Me</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </div>
+    
+    <br>
+    <div id="contact">
+      <img src="imgfolder/contact2.png">
+      <div align="justify">
+        <form class="form" action="php/mail.php" method="post">
+        <br>
+        <div id="name">
+          <p>name<input type="text" name="subject" placeholder="" size="15" maxlength="30" /></p>
+        </div>
+        <div id="emailcontainer">
+          <p>email<input type="text" name="email" id="email" placeholder="" size="15" maxlength="30" /></p>
+        </div>
+        <!--adding </p> after <p> makes it have one line itself, if make div for input
+        make go down but correct left position-->
+        <div align="center">
+          <textarea name="message" cols="60" rows="13" /></textarea>
+        </div>
+        <br>
+        <div id="send">
+          <input type="image" name="submit" value="submit" src="imgfolder/send.png"> 
+        </div>
+                <!--is it send-->
+        </form>
+        <br>
+      </div>
+    </div>
+    <!--<a href="#top">Top</a>-->
+   <br>
+   <div id="logo">
+      <div align="right">
+             <a href="https://www.behance.net/tendent"><img src="imgfolder/Behance_icon2.png" height="70px"></a>
+             <a href="https://www.pinterest.com/lxz1098/"><img src="imgfolder/pinterest.png" height="70px"></a>
+             <a href="https://www.linkedin.com/profile/view?id=182786564&authType=NAME_SEARCH&authToken=y4iW&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A2-1-2%2CtarId%3A1430338993840%2Ctas%3Alin"><img src="imgfolder/linkedin.png" height="65px"></a>
+      </div>
+    </div>
+  </div>
+  </body>

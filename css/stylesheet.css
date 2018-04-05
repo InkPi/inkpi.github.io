@@ -1,0 +1,258 @@
+/*neotheo titles*/
+* {font-family: Trebuchet MS; margin: 0; padding: 0;}
+li {display: inline; margin-left: 30px; text-decoration: none; }
+
+/*header*/
+#maincontainer {
+	width: 960px;
+	margin: 0px auto;
+}
+
+#logo {margin: center;}
+
+.col-1 {
+	position: relative;
+	width:100%;
+}
+
+.overlap {
+	width:30%; /*can see menu words but somehow fixed. Can't screen adjust*/
+}
+
+#nav {
+	position: absolute;
+	width:70%; /*can see menu words but somehow fixed. Can't screen adjust. oh its the margin px*/
+	top: 50;
+    right: -200px;
+}
+
+
+#about {
+	background-color: #e8d75b; 
+	overflow: auto;
+	margin: 310px auto 0px auto;
+	width: 960px;
+}
+
+#contact {
+	background-color: #e8d75b;}
+
+#message {background-color: #e8d75b; overflow: auto;
+	margin: 0px auto; height:530px;
+}
+
+#slideshow {
+    position:absolute;
+    z-index: -1;
+    top: 0px;
+    height:600px;
+    width:100%;
+}
+
+
+/*slider*/
+.container{
+	width:960px;
+	height:900px;
+	padding:0px;
+	margin: 0px auto;
+	position: absolute;
+}
+.container li{
+	padding:0px;
+	margin: 0px auto;
+}
+.image-slider-wrapper{
+	overflow: hidden;
+}
+#image_slider{
+	position: relative;
+	overflow: hidden;
+	height: 900px;
+	padding:0;
+	left:0;
+}
+#image_slider li{
+	position:relative;
+	max-width: 100%;
+	float:left;
+	list-style: none;
+	left: 0;
+}
+
+/*#slideshow img {
+    position:relative;
+    float:left;
+    z-index:8;
+}
+*/
+/*#slideshow img.active {
+    z-index:10;
+}
+
+#slideshow img.last-active {
+    z-index:9;
+}
+*//*.bg
+{
+  width: 100%;
+  z-index: 0;
+}*/
+
+/*backg color not covering everything*/
+a:link {color: black;
+		text-decoration: none;}
+a:visited {color: black;}
+a:hover {color: white;}
+/*border-radius (p329)*/
+		p.about1 {width:
+				400px; margin-left: -70px;}
+		p.aboutmain {width:500px;}
+										/*^not wrking*/
+h2 {font-size:60pt; font-family: NeoTheo}
+/*prob not even going to use this but instead an image*/
+h1.indexheader {font-size:50pt; font-family: NeoTheo; margin-left: 60px; float:left;}
+h3.subhead {font-size:45pt; font-family: NeoTheo;}
+h3.innerhead {font-size:45pt; font-family: NeoTheo; font-color: #ffffff;}
+ /*margin bottom
+	       calc(11% - 9)
+	       float:
+	       #header {position: top}*/
+
+#about2 {width:900px;}
+#about1 {width:480px; margin-left:220px; float:left; font-size: 16px;}
+#button1 {float:right; margin-right:90px;}
+#bpara {float:right;}
+
+#col1 {width: 320px; height: 640px; float:left; background: url('../imgfolder/wowhuhsite.jpg');} /*margin-left: 130px; margin-right: 0; padding-right: 0;*/
+#col2 {width: 640px; height: 320px; float:right; background: url('../imgfolder/27.jpg');}
+#col3 {width: 320px; height: 320px; float: left; background: url('../imgfolder/typo9_icon.jpg');}
+#col4 {width: 320px; height: 320px; float: left; padding-left: 0; background: url('../imgfolder/typo2maggrids_icon.jpg');}
+
+/*confused on those cols*/
+.subcontent {""}
+/*slash triangular background color for index*/
+/*did I do something wrong with li*/
+li.header {color: rgba (0, 0, 255, 0.8); float: right;}
+/*^it went up too somehow with float*/
+a:active {color: rgba(0, 0, 255, 0.8)
+text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;}
+/*^dont see diff*/
+img.portimg {margin-left: 20px;}
+p.circle {padding: 0px; border-radius: 100px; color:gray;}
+/*new*/
+#indexMore {
+	position: absolute;
+	padding-top: 30px;
+    padding-left: 30px;}
+#indexMore:hover {
+	color: #E8D75B;
+}
+/*^can't see it*/
+/*div id "about" want the background cover more areas above and below <br> doesnt wrk*/ 
+#port1 {width: 320px; height: 300px; float:left; background: url('../imgfolder/960_grid_16_col3d.jpg');}
+#port2 {width: 320px; height: 300px; float:left; background: url('../imgfolder/seniorinformationc_icon.jpg');}
+#port3 {width: 320px; height: 600px; float:right; background: url('../imgfolder/wowhuhsite.jpg');}
+#port4 {width: 320px; height: 300px; float:left; background: url('../imgfolder/SeniorPort1_icon.jpg');}
+#port5 {width: 320px; height: 300px; float:left; background: url('../imgfolder/typo9_icon.jpg');}
+#port6 {width: 640px; height: 300px; float:left; background: url('../imgfolder/CBI_justpic.jpg');}
+#port7 {width: 320px; height: 300px; float:left; background: url('../imgfolder/SeniorPortDragon_icon.jpg');}
+#port8 {width: 320px; height: 300px; float:left; background: url('../imgfolder/SeniorPortsakura_icon.jpg');}
+#port9 {width: 640px; height: 300px; float:left; background: url('../imgfolder/27.jpg');}
+#port10 {width: 640px; height: 300px; float:left; background: url('../imgfolder/typo2maggrids_icon.jpg');}
+#port11 {width: 320px; height: 300px; float:left; background: url('../imgfolder/acspreporiginal2icon.jpg');}
+h2 {color: #e8d75b;}
+img.skillheader {margin-left: 60px;}
+#body {margin-left: 100px;}
+tf.language {background-color: black; color: white; font-family: NeoTheo; font-size:45pt;}
+td.chinese {border: 1px solid;}
+/*how get top part of border disappear or hidden*/
+/*.box {textarea-align: right;} text box align prob*/
+@font-face { 
+	font-family: NeoTheo;
+	src: url('../fonts/NeoTheo.otf');
+}
+
+			#submit {margin-left: 800px;}
+			#emailcontainer {margin-left: 255px; margin-bottom: 7px;}
+			#name {margin-left: 255px;}
+			#send {margin-left: 560px;}
+.timenumber {margin-left:60px; font-size:15px;}
+
+input, textarea {
+	color: #999999;
+}
+
+#topimage {background-color: black;}
+
+#timeline {
+    position:absolute;
+    z-index: -1;
+    top: 250px;
+    margin-left:-10px;
+}
+
+#numbers {float:left;}
+#subhead {float: left;}
+
+#portrait {float:left;
+			margin-right:10px;}
+			
+#skills {margin-left: 37px;}
+
+#language {position:static; margin-right: 90px;}
+
+
+/*about me*/
+#background {background: url('../imgfolder/Cover_background_port_online.jpg'); height: 380px;}
+#aboutme {color: #2c2c2c;}
+
+
+/*resume*/
+.skillmain {font-size: 16px; 
+	        width: 25%;
+	        float:left;
+	        }
+.skilltxt1, .skilltxt2, #language {float:left;
+	                  width: 18%;
+                      padding-left:-30px;
+                      }
+#language {
+	padding-right: 20px;
+	margin-left: 27px;
+}
+
+#education_list{
+	font-size: 16px; 
+	width: 50%;
+	float:left;
+	margin-bottom: 20px;
+}
+
+#w3logo {
+	float: right;
+	width: 47%;
+	padding-bottom: 70px;
+	padding-left:5px;
+}
+
+/*portfolio popup*/
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+/*media query-max size of screens*/
+[class*="col-"] {
+	width:100%;
+}
+

@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>Linda Zhou's portfolio</title>
+    <meta charset="utf-8" />
+    <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/shadowbox.css">
+    <script type="text/javascript" src="js/shadowbox.js"></script>
+    <script type="text/javascript">
+    // Shadowbox.init();
+    </script>
+  </head>
+  <body>
+  <div id="maincontainer">
+    <div class="container">
+      <div class="image-slider-wrapper">
+        <ul id="image_slider">
+          <li><img src="imgfolder/module1.jpg" alt="" class="active" width="960" /></li>
+          <li><img src="imgfolder/module2c.jpg" alt="" class="active" width="960" /></li>
+        </ul>
+        <div class="pager">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="slider">
+      <div class="sliderimg"></div>
+    </div>
+    <div class="col-1">
+    <div class="overlap">
+      <a href="index.html"><img src="imgfolder/iconlogo.png"></a>
+    </div>
+    <div id="nav">
+      <li><a href="AboutMe.html">About Me</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </div>
+  </div> <!--col-1 nav bar-->
+
+    <div id="about">
+      <br>
+      <br>
+      <div id="about2">
+        <p id="about1">Hi and welcome to my site! My name is Linda Zhou. I graduated with a four year degree in Graphic Design and earned certificates for HTML5 and CSS. I also went to learn AJAX, Javascript, and JQuery. </p>
+      </div>
+      <!--div align="center">-->
+      <!--<p class="circle"></p>-->
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1 class="indexheader">Tools/Skills</h1>
+    </div>
+
+    <img class="skillheader" src="imgfolder/skillarrow.png">
+    <br>
+    <div id="skills"><img src="imgfolder/skills3.png"></div>
+    <br>
+    <br>
+
+    <img src="imgfolder/portribbon.png">
+    <!--new-->
+    <a href="portfolio.html" id="indexMore">more</a>
+    <br>
+    <a href="imgfolder/typo2webfinal.pdf" rel="shadowbox" title="Wowhuh Site"><div id="col1" class="port"></div></a>
+    <a href="imgfolder/lionhungry.pdf" rel="shadowbox" title="Lion's Hungry Appetite"><div id="col2" class="port"></div></a>
+    <a href="imgfolder/typo9.jpg" rel="shadowbox" title="Walking Skyscrapers Tour Poster"><div id="col3" class="port"></div></a>
+    <a href="imgfolder/seniorinformationc.jpg" rel="shadowbox" title="Temperature Effect Poster [large]"><div id="col4" class="port"></div></a>
+    <br>
+    <div id="contact">
+      <img src="imgfolder/contact2.png">
+      <div align="justify">
+        <form class="form" action="php/mail.php" method="post">
+        <br>
+        <div id="name">
+        	<p>name<input type="text" name="subject" placeholder="" size="15" maxlength="30" /></p>
+        </div>
+        <div id="emailcontainer">
+        	<p>email<input type="text" name="email" id="email" placeholder="" size="15" maxlength="30" /></p>
+        </div>
+        <!--adding </p> after <p> makes it have one line itself, if make div for input
+        make go down but correct left position-->
+				<div align="center">
+					<textarea name="message" cols="60" rows="13" /></textarea>
+				</div>
+      	<br>
+				<div id="send">
+					<input type="image" name="submit" value="submit" src="imgfolder/send.png">
+				</div>
+    						<!--is it send-->
+      	</form>
+        <br>
+      </div>
+    </div>
+    <!--<a href="#top">Top</a>-->
+   <br>
+   <div id="logo">
+      <div align="right">
+ 			<a href="https://www.behance.net/tendent"><img src="imgfolder/Behance_icon2.png" height="70px"></a>
+            <a href="https://www.pinterest.com/lxz1098/"><img src="imgfolder/pinterest.png" height="70px"></a>
+            <a href="https://www.linkedin.com/profile/view?id=182786564&authType=NAME_SEARCH&authToken=y4iW&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A2-1-2%2CtarId%3A1430338993840%2Ctas%3Alin"><img src="imgfolder/linkedin.png" height="65px"></a>
+      </div>
+    </div>
+  </div>
+
+  </body>
+  <script>
+    $(document).ready(function(){
+      $('body').on('click', 'img', function(){
+        $("#slideshow").css("transform","translateX("+$(this).index() * -450+"px)");
+        $("#slide1_controls span").removeClass("selected");
+        $(this).addClass("selected");
+      });
+    })
+  </script>
+
+</html>
