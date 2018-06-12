@@ -28,7 +28,7 @@ li {display: inline; margin-left: 30px; text-decoration: none; }
 
 
 #about {
-	background-color: #e8d75b; 
+	background-color: #e8d75b;
 	overflow: auto;
 	margin: 310px auto 0px auto;
 	width: 960px;
@@ -149,7 +149,7 @@ p.circle {padding: 0px; border-radius: 100px; color:gray;}
 	color: #E8D75B;
 }
 /*^can't see it*/
-/*div id "about" want the background cover more areas above and below <br> doesnt wrk*/ 
+/*div id "about" want the background cover more areas above and below <br> doesnt wrk*/
 #port1 {width: 320px; height: 300px; float:left; background: url('../imgfolder/960_grid_16_col3d.jpg');}
 #port2 {width: 320px; height: 300px; float:left; background: url('../imgfolder/seniorinformationc_icon.jpg');}
 #port3 {width: 320px; height: 600px; float:right; background: url('../imgfolder/wowhuhsite.jpg');}
@@ -161,10 +161,10 @@ p.circle {padding: 0px; border-radius: 100px; color:gray;}
 #port9 {width: 640px; height: 300px; float:left; background: url('../imgfolder/27.jpg');}
 #port10 {width: 640px; height: 300px; float:left; background: url('../imgfolder/typo2maggrids_icon.jpg');}
 #port11 {width: 320px; height: 300px; float:left; background: url('../imgfolder/acspreporiginal2icon.jpg');}
-#port12 {width: 320px; height: 300px; float:left; background: url('../imgfolder/rpg.png');}
-#port13 {width: 320px; height: 300px; float:left; background-color:grey;}
-#port14 {width: 320px; height: 300px; float:left; background-color: grey;}
-#port15 {width: 320px; height: 300px; float:left; background-color: yellow;}
+
+#port12 {width: 960px; height: 300px; float:left; background: url('../imgfolder/rpg.png');}
+#port13 {width: 960px; height: 300px; float:left; background-color:grey;}
+#port14 {width: 960px; height: 300px; float:left; background-color: grey;}
 
 h2 {color: #e8d75b;}
 img.skillheader {margin-left: 60px;}
@@ -173,7 +173,7 @@ tf.language {background-color: black; color: white; font-family: NeoTheo; font-s
 td.chinese {border: 1px solid;}
 /*how get top part of border disappear or hidden*/
 /*.box {textarea-align: right;} text box align prob*/
-@font-face { 
+@font-face {
 	font-family: NeoTheo;
 	src: url('../fonts/NeoTheo.otf');
 }
@@ -202,7 +202,7 @@ input, textarea {
 
 #portrait {float:left;
 			margin-right:10px;}
-			
+
 #skills {margin-left: 37px;}
 
 #language {position:static; margin-right: 90px;}
@@ -214,7 +214,7 @@ input, textarea {
 
 
 /*resume*/
-.skillmain {font-size: 16px; 
+.skillmain {font-size: 16px;
 	        width: 25%;
 	        float:left;
 	        }
@@ -228,7 +228,7 @@ input, textarea {
 }
 
 #education_list{
-	font-size: 16px; 
+	font-size: 16px;
 	width: 50%;
 	float:left;
 	margin-bottom: 20px;
