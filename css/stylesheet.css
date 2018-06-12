@@ -163,8 +163,8 @@ p.circle {padding: 0px; border-radius: 100px; color:gray;}
 #port11 {width: 320px; height: 300px; float:left; background: url('../imgfolder/acspreporiginal2icon.jpg');}
 
 #port12 {width: 960px; height: 300px; float:left; padding-bottom: 10px; background: url('../imgfolder/rpg.png');}
-#port13 {width: 960px; height: 300px; float:left; padding-bottom: 10px; background-color:grey;}
-#port14 {width: 960px; height: 300px; float:left; background-color: grey;}
+#port13 {width: 960px; height: 300px; float:left; padding-bottom: 10px; background: url('../imgfolder/workspaces.png');}
+#port14 {width: 960px; height: 300px; float:left; background: url('../imgfolder/project4.png');}
 
 h2 {color: #e8d75b;}
 img.skillheader {margin-left: 60px;}
