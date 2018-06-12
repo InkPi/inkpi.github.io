@@ -166,9 +166,9 @@ p.circle {padding: 0px; border-radius: 100px; color:gray;}
 #port10 {width: 640px; height: 300px; float:left; background: url('../imgfolder/typo2maggrids_icon.jpg');}
 #port11 {width: 320px; height: 300px; float:left; background: url('../imgfolder/acspreporiginal2icon.jpg');}
 
-#port12 {width: 960px; height: 300px; float:left; margin-bottom: 30px; background: url('../imgfolder/rpg.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;}
-#port13 {width: 960px; height: 300px; float:left; margin-bottom: 30px; background: url('../imgfolder/workspaces.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
-#port14 {width: 960px; height: 300px; float:left; margin-bottom: 60px; background: url('../imgfolder/project4.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
+#port12 {width: 960px; height: 300px; float:left; border-left: solid; margin-bottom: 30px; background: url('../imgfolder/rpg.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;}
+#port13 {width: 960px; height: 300px; float:left; border-left: solid; margin-bottom: 30px; background: url('../imgfolder/workspaces.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
+#port14 {width: 960px; height: 300px; float:left; border-left: solid; margin-bottom: 60px; background: url('../imgfolder/project4.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
 
 h2 {color: #e8d75b;}
 img.skillheader {margin-left: 60px;}
