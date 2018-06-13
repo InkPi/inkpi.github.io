@@ -169,7 +169,7 @@ p.circle {padding: 0px; border-radius: 100px; color:gray;}
 
 #port12 {width: 960px; height: 300px; float:left; border: solid silver; margin-bottom: 30px; background: url('../imgfolder/rpg.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;}
 #port13 {width: 960px; height: 300px; float:left; border: solid silver; margin-bottom: 30px; background: url('../imgfolder/workspaces.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
-#port14 {width: 960px; height: 300px; float:left; border: solid #e8d75b; margin-bottom: 80px; background: url('../imgfolder/project4.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
+#port14 {width: 960px; height: 300px; float:left; border: solid silver; margin-bottom: 80px; background: url('../imgfolder/project4.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
 
 h2 {color: #e8d75b;}
 img.skillheader {margin-left: 60px;}
