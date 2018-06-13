@@ -155,17 +155,17 @@ p.circle {padding: 0px; border-radius: 100px; color:gray;}
 }
 /*^can't see it*/
 /*div id "about" want the background cover more areas above and below <br> doesnt wrk*/
-#port1 {width: 320px; height: 300px; float:left; padding: 10px; background: url('../imgfolder/960_grid_16_col3d.jpg');}
-#port2 {width: 320px; height: 300px; float:left; padding: 10px; background: url('../imgfolder/seniorinformationc_icon.jpg');}
-#port3 {width: 320px; height: 600px; float:right; padding: 10px; background: url('../imgfolder/wowhuhsite.jpg');}
-#port4 {width: 320px; height: 300px; float:left; padding: 10px;background: url('../imgfolder/SeniorPort1_icon.jpg');}
-#port5 {width: 320px; height: 300px; float:left; padding: 10px; background: url('../imgfolder/typo9_icon.jpg');}
-#port6 {width: 640px; height: 300px; float:left; padding: 10px; background: url('../imgfolder/CBI_justpic.jpg');}
-#port7 {width: 320px; height: 300px; float:left; padding: 10px; background: url('../imgfolder/SeniorPortDragon_icon.jpg');}
-#port8 {width: 320px; height: 300px; float:left; padding: 10px; background: url('../imgfolder/SeniorPortsakura_icon.jpg');}
-#port9 {width: 640px; height: 300px; float:left; padding: 10px; background: url('../imgfolder/27.jpg');}
-#port10 {width: 640px; height: 300px; float:left; padding: 10px;background: url('../imgfolder/typo2maggrids_icon.jpg');}
-#port11 {width: 320px; height: 300px; float:left; padding: 10px; background: url('../imgfolder/acspreporiginal2icon.jpg');}
+#port1 {width: 320px; height: 300px; float:left; margin: 10px; background: url('../imgfolder/960_grid_16_col3d.jpg');}
+#port2 {width: 320px; height: 300px; float:left; margin: 10px; background: url('../imgfolder/seniorinformationc_icon.jpg');}
+#port3 {width: 320px; height: 600px; float:right; margin: 10px; background: url('../imgfolder/wowhuhsite.jpg');}
+#port4 {width: 320px; height: 300px; float:left; margin: 10px;background: url('../imgfolder/SeniorPort1_icon.jpg');}
+#port5 {width: 320px; height: 300px; float:left; margin: 10px; background: url('../imgfolder/typo9_icon.jpg');}
+#port6 {width: 640px; height: 300px; float:left; margin: 10px; background: url('../imgfolder/CBI_justpic.jpg');}
+#port7 {width: 320px; height: 300px; float:left; margin: 10px; background: url('../imgfolder/SeniorPortDragon_icon.jpg');}
+#port8 {width: 320px; height: 300px; float:left; margin: 10px; background: url('../imgfolder/SeniorPortsakura_icon.jpg');}
+#port9 {width: 640px; height: 300px; float:left; margin: 10px; background: url('../imgfolder/27.jpg');}
+#port10 {width: 640px; height: 300px; float:left; margin: 10px;background: url('../imgfolder/typo2maggrids_icon.jpg');}
+#port11 {width: 320px; height: 300px; float:left; margin: 10px; background: url('../imgfolder/acspreporiginal2icon.jpg');}
 
 #port12 {width: 960px; height: 300px; float:left; border: solid; margin-bottom: 30px; background: url('../imgfolder/rpg.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;}
 #port13 {width: 960px; height: 300px; float:left; border: solid; margin-bottom: 30px; background: url('../imgfolder/workspaces.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
