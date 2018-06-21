@@ -4,12 +4,7 @@
     <meta charset="utf-8" />
     <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="css/shadowbox.css">
-    <script type="text/javascript" src="js/shadowbox.js"></script>
-    <script type="text/javascript">
-    // Shadowbox.init();
-    </script>
   </head>
   <body>
   <div id="maincontainer">
@@ -35,7 +30,7 @@
       <li><a href="AboutMe.html">About Me</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <!--<li><a href="resume.html">Resume</a></li>-->
-      <li><a href="contact.html">Contact</a></li>
+      <!--<li><a href="contact.html">Contact</a></li>-->
     </div>
   </div> <!--col-1 nav bar-->
 
@@ -76,22 +71,22 @@
       <div align="justify">
         <form class="form" action="php/mail.php" method="post">
         <br>
-        <div id="name">
+        <p align="center">Please contact me at Lz28330@gmail.com</p>
+        <!--<div id="name">
         	<p>name<input type="text" name="subject" placeholder="" size="15" maxlength="30" /></p>
         </div>
         <div id="emailcontainer">
         	<p>email<input type="text" name="email" id="email" placeholder="" size="15" maxlength="30" /></p>
-        </div>
+        </div>-->
         <!--adding </p> after <p> makes it have one line itself, if make div for input
         make go down but correct left position-->
-				<div align="center">
+				<!--<div align="center">
 					<textarea name="message" cols="60" rows="13" /></textarea>
 				</div>
       	<br>
 				<div id="send">
 					<input type="image" name="submit" value="submit" src="imgfolder/send.png">
-				</div>
-    						<!--is it send-->
+				</div>-->
       	</form>
         <br>
       </div>
@@ -108,6 +103,11 @@
   </div>
 
   </body>
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/shadowbox.js"></script>
+  <script type="text/javascript">
+    // Shadowbox.init();
+  </script>
   <script>
     $(document).ready(function(){
       $('body').on('click', 'img', function(){
