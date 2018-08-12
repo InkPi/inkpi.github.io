@@ -32,6 +32,7 @@ li {display: inline; margin-left: 30px; text-decoration: none; }
 h3 {
   font-size: 35px;
   padding-bottom: 20px;
+	padding-left: 23px;
 }
 
 #logo {margin: center;
@@ -96,7 +97,12 @@ width: 100%;}
 	background-size: cover;
 }
 
-
+/*
+					Footer
+													*/
+#footer div {
+    padding-right: 20px;
+}
 
 /* maybe */
 .headline {
@@ -111,6 +117,7 @@ width: 100%;}
 .header {
 	width: 100vw;
 }
+
 
 /* .about {
 	background-color: #e8d75b;
@@ -332,6 +339,11 @@ input, textarea {
 }
 
 /*portfolio popup*/
+
+section.containPhead {
+	height: 90px;
+}
+
 /* padding-bottom and top for image */
 .mfp-no-margins img.mfp-img {
 	padding: 0;
@@ -347,7 +359,7 @@ input, textarea {
 }
 
 .portHead {
-	width: 100%;
+	width: 100vw;
 	float: left;
 	margin-top: calc(10px + 1vw);
 }
@@ -580,7 +592,18 @@ input, textarea {
 								Porfolio
 */
 
-@media screen and  (max-width: 980px) {
-	.webdev2 div {
+@media screen and  (max-width: 972px) {
+	.graphicDesign2 {
+		width: 640px;
+	}
+}
+
+@media screen and  (max-width: 651px) {
+	.graphicDesign2 {
+		width: 320px;
+	}
+
+	#port6, #port9, #port10 {
+		width: 300px;
 	}
 }
