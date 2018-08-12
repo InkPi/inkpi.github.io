@@ -29,10 +29,9 @@ li {display: inline; margin-left: 30px; text-decoration: none; }
 	background-size: cover;
 }
 
-h3 {
-  font-size: 35px;
+h3, #aboutme {
+  font-size: 45px;
   padding-bottom: 20px;
-	padding-left: 23px;
 }
 
 #logo {margin: center;
@@ -308,7 +307,13 @@ input, textarea {
 /*about me*/
 #background {background: url('../imgfolder/Cover_background_port_online.jpg'); height: 380px;}
 #aboutme {color: #2c2c2c; width: 286px;}
+section.containAHead {
+	height: 190px;
+}
 
+section.containerMinor {
+	width: 80vw;
+}
 
 /*resume*/
 .skillmain {font-size: 16px;
