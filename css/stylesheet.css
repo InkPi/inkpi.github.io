@@ -249,8 +249,9 @@ p.circle {padding: 0px; border-radius: 100px; color:gray;}
 #port11 {width: 300px; height: 280px; float:left; margin: 10px; background: url('../imgfolder/acspreporiginal2icon.jpg');}
 
 #port12 {width: 96vw; height: 300px; margin: 0 auto; border: solid silver; margin-bottom: 30px; background: url('../imgfolder/rpg.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;}
-#port13 {width: 96vw; height: 300px; margin: 0 auto; border: solid silver; margin-bottom: 30px; background: url('../imgfolder/workspaces.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
-#port14 {width: 96vw; height: 300px; margin: 0 auto; border: solid silver; margin-bottom: 80px; background: url('../imgfolder/project4.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
+#port13 {width: 96vw; height: 300px; margin: 0 auto; border: solid silver; margin-bottom: 30px; background: url('../imgfolder/videosite.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
+#port14 {width: 96vw; height: 300px; margin: 0 auto; border: solid silver; margin-bottom: 80px; background: url('../imgfolder/doge.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
+#port15 {width: 96vw; height: 300px; margin: 0 auto; border: solid silver; margin-bottom: 80px; background: url('../imgfolder/project4.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
 
 
 .footerPort {
