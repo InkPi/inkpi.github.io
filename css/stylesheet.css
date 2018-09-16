@@ -34,8 +34,11 @@ h3, #aboutme {
   padding-bottom: 20px;
 }
 
-#logo {margin: center;
-width: 100%;}
+#logo {
+	margin: center;
+	width: 100%;
+	padding-right: 3%;
+}
 
 .overlap {
 	width:30%; /*can see menu words but somehow fixed. Can't screen adjust*/
@@ -473,6 +476,9 @@ section.containPhead {
 	.nav {
 		margin-top: 39px;
 	}
+	.centerproj {
+		width: 640px;
+	}
 }
 
 @media screen and (max-width: 880px) {
@@ -562,7 +568,7 @@ section.containPhead {
 @media screen and (max-width: 400px) {
 	.icon {
 		height: auto;
-		width: 67px;
+		width: 60px;
 	}
 	.port {
 		width: 320px;
@@ -575,7 +581,8 @@ section.containPhead {
 	}
 
 	#about1, #about2 {
-		width: 350px;
+		width: 300px;
+		font-size: 13px;
 	}
 
 	.nav {
@@ -586,6 +593,16 @@ section.containPhead {
 	.centerproj {
 		width: 320px;
 	}
+
+	#logo {
+		padding-right: 10px;
+	}
+
+	#logo img {
+		height: auto;
+		width: 45px;
+	}
+
 }
 
 /*
