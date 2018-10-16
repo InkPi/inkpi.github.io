@@ -46,9 +46,10 @@ h3, #aboutme {
 }
 
 .nav {
-	width:80vw; /*can see menu words but somehow fixed. Can't screen adjust. oh its the margin px*/
-	margin-top: 75px;
+	width:100vw; /*can see menu words but somehow fixed. Can't screen adjust. oh its the margin px*/
+	margin-top: 3px;
 	text-align: right;
+	padding-right: 25%;
 }
 
 .col-1 {
@@ -75,7 +76,8 @@ h3, #aboutme {
 
 .image-slider-wrapper{
 	width: 100vw;
-	height: auto;
+	height: 600px; /*was auto*/
+	overflow: hidden;
 }
 #image_slider{
 	position: relative;
@@ -95,8 +97,22 @@ h3, #aboutme {
 #image_slider li img {
 	/* background: url(imgfolder/module1.jpg) no-repeat center center fixed; */
 	/* background: url(imgfolder/module2.jpg) no-repeat center center fixed; */
-	background: no-repeat center center fixed; width:100vw; height:auto;
+	background: no-repeat center center fixed; width:100vw; max-width: 100%; height:auto;
+	display: block;
 	background-size: cover;
+}
+
+.flip {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+
+	zoom: 1;
+}
+
+img.flip {
+	float: right;
 }
 
 /*
@@ -131,7 +147,7 @@ h3, #aboutme {
 } */
 
 #about2 {margin: 0 auto; text-align: center;}
-#about1 {width:480px; float:left; font-size: 16px; padding-bottom: 30px}
+#about1 {width:100vw; float:left; font-size: 25px; padding-bottom: 30px}
 
 .aboutmain {margin-top: 200px;}
 
@@ -178,6 +194,10 @@ h3, #aboutme {
 /*backg color not covering everything*/
 a:link {color: black;
 		text-decoration: none;}
+.indexNav a:link {
+	color: white;
+	display: inline-block;
+}
 a:visited {color: black;}
 a:hover {color: white;}
 /*border-radius (p329)*/
@@ -251,9 +271,9 @@ p.circle {padding: 0px; border-radius: 100px; color:gray;}
 #port10 {width: 620px; height: 280px; float:left; margin: 10px;background: url('../imgfolder/typo2maggrids_icon.jpg');}
 #port11 {width: 300px; height: 280px; float:left; margin: 10px; background: url('../imgfolder/acspreporiginal2icon.jpg');}
 
-#port12 {width: 96vw; height: 300px; margin: 0 auto; border: solid silver; margin-bottom: 30px; background: url('../imgfolder/rpg.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;}
-#port13 {width: 96vw; height: 300px; margin: 0 auto; border: solid silver; margin-bottom: 30px; background: url('../imgfolder/videosite.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
-#port14 {width: 96vw; height: 300px; margin: 0 auto; border: solid silver; margin-bottom: 80px; background: url('../imgfolder/doge.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
+#port12 {width: 300px; height: 280px; float:left; border: solid silver; margin: 10px; background: url('../imgfolder/rpg.png'); background-position: center center; background-repeat: no-repeat; background-size: cover;}
+#port13 {width: 300px; height: 280px; float:left; border: solid silver; margin: 10px; background: url('../imgfolder/videosite.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
+#port14 {width: 300px; height: 280px; float:left; border: solid silver; margin: 10px; background: url('../imgfolder/doge.png'); background-width: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;}
 
 .footerPort {
   margin-top: 30px;
@@ -307,7 +327,7 @@ input, textarea {
 
 
 /*about me*/
-#background {background: url('../imgfolder/Cover_background_port_online.jpg'); height: 380px;}
+#background {background: url('../imgfolder/Cover_background_port_online.jpg'); height: 166px;}
 #aboutme {color: #2c2c2c; width: 286px;}
 section.containAHead {
 	height: 190px;
@@ -379,15 +399,7 @@ section.containPhead {
 	background-color: silver;
 	padding: 20px 0% 20px 2%;
 	margin-bottom: 15px;
-}
-
-/*Web Dev*/
-.webdev {
 	width: 100vw;
-}
-
-.webdev2 {
-	margin: auto;
 }
 
 /*Graphic Design*/
@@ -418,19 +430,25 @@ section.containPhead {
 
 @media screen and (max-width: 1400px) {
 	.nav {
-		margin-top: 70px;
+		margin-top: 3px;
 	}
 }
 
 @media screen and (max-width: 1289px) {
 	.nav {
-		margin-top: 64px;
+		margin-top: 3px;
+	}
+}
+
+@media screen and (max-width: 1259px) {
+	.image-slider-wrapper {
+	    height: 550px;
 	}
 }
 
 @media screen and (max-width: 1243px) {
 	.nav {
-		margin-top: 60px;
+		margin-top: 3px;
 	}
 }
 
@@ -443,7 +461,7 @@ section.containPhead {
 
 @media screen and (max-width: 1153px) {
 	.nav {
-		margin-top: 54px;
+		margin-top: 3px;
 	}
 	.icon {
 		height: auto;
@@ -451,19 +469,31 @@ section.containPhead {
 	}
 }
 
+@media screen and (max-width: 1124px) {
+	.image-slider-wrapper {
+	    height: 500px;
+	}
+}
+
 @media screen and (max-width: 1089px) {
 	.nav {
-		margin-top: 49px;
+		margin-top: 3px;
 	}
 }
 
 @media screen and (max-width: 1018px) {
 	.nav {
-		margin-top: 44px;
+		margin-top: 3px;
 	}
 	.icon {
 		height: auto;
 		width: 125px;
+	}
+}
+
+@media screen and (max-width: 1002px) {
+	.image-slider-wrapper {
+	    height: 500px;
 	}
 }
 
@@ -478,7 +508,7 @@ section.containPhead {
 		justify-content: center;
 	}
 	.nav {
-		margin-top: 39px;
+		margin-top: 3px;
 	}
 	.centerproj {
 		width: 640px;
@@ -492,15 +522,21 @@ section.containPhead {
 	}
 }
 
+@media screen and (max-width: 873px) {
+	.image-slider-wrapper {
+	    height: 424px;
+	}
+}
+
 @media screen and (max-width: 860px) {
 	.nav {
-		margin-top: 34px;
+		margin-top: 3px;
 	}
 }
 
 @media screen and (max-width: 816px) {
 	.nav {
-		margin-top: 31px;
+		margin-top: 3px;
 	}
 	.icon {
 		height: auto;
@@ -508,19 +544,40 @@ section.containPhead {
 	}
 }
 
+@media screen and (max-width: 808px) {
+	.image-slider-wrapper {
+	    height: 400px;
+	}
+}
+
 @media screen and (max-width: 750px) {
 	.nav {
-		margin-top:  26px;
+		margin-top:  3px;
 	}
 	.icon {
 		height: auto;
 		width: 108px;
 	}
+	.indexNav li {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 748px) {
+	.image-slider-wrapper {
+	    height: 390px;
+	}
+}
+
+@media screen and (max-width: 722px) {
+	.image-slider-wrapper {
+	    height: 370px;
+	}
 }
 
 @media screen and (max-width: 706px) {
 	.nav {
-		margin-top:  26px;
+		margin-top: -15px;
 	}
 	.icon {
 		height: auto;
@@ -528,9 +585,15 @@ section.containPhead {
 	}
 }
 
+@media screen and (max-width: 673px) {
+	.image-slider-wrapper {
+	    height: 350px;
+	}
+}
+
 @media screen and (max-width: 655px) {
 	.nav {
-		margin-top: 21px;
+		margin-top: -15px;
 	}
 	.icon {
 		height: auto;
@@ -542,9 +605,11 @@ section.containPhead {
 	.col1, .col2, .col3, .col4 {
 		width: 100vw;
 	}
+}
 
-	.nav {
-		margin-top: 15px;
+@media screen and (max-width: 623px) {
+	.image-slider-wrapper {
+	    height: 330px;
 	}
 }
 
@@ -555,10 +620,22 @@ section.containPhead {
 	}
 }
 
+@media screen and (max-width: 574px) {
+	.image-slider-wrapper {
+	    height: 320px;
+	}
+}
+
 @media screen and (max-width: 560px) {
 	.icon {
 		height: auto;
 		width: 83px;
+	}
+}
+
+@media screen and (max-width: 548px) {
+	.image-slider-wrapper {
+	    height: 315px;
 	}
 }
 
@@ -569,10 +646,51 @@ section.containPhead {
 	}
 }
 
+@media screen and (max-width: 537px) {
+	.image-slider-wrapper {
+	    height: 310px;
+	}
+}
+
+@media screen and (max-width: 523px) {
+	.image-slider-wrapper {
+	    height: 300px;
+	}
+}
+
 @media screen and (max-width: 507px) {
 	.nav {
 		width: 100vw;
 		padding-right: 30px;
+		display: inline;
+	}
+}
+
+@media screen and (max-width: 498px) {
+	.image-slider-wrapper {
+	    height: 295px;
+	}
+}
+
+@media screen and (max-width: 485px) {
+	.image-slider-wrapper {
+	    height: 288px;
+	}
+}
+
+@media screen and (max-width: 469px) {
+	.image-slider-wrapper {
+	    height: 280px;
+	}
+}
+
+@media screen and (max-width: 448px) {
+	.nav {
+		width: 100vw;
+		padding-right: 30px;
+	}
+	.image-slider-wrapper {
+			height: 275px;
 	}
 }
 
@@ -591,14 +709,14 @@ section.containPhead {
 		flex-direction: row
 	}
 
-	#about1, #about2 {
+	/* #about1, #about2 {
 		width: 300px;
 		font-size: 13px;
-	}
+	} */
 
 	.nav {
 		width: 93vw;
-		margin-top: 2px;
+		margin-top: 1px;
 	}
 
 	.centerproj {
