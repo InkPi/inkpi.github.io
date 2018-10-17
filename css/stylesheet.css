@@ -58,6 +58,12 @@ h3, #aboutme {
 	margin-top: 20px;
 }
 
+.aboutMainC {
+	margin: 0 auto;
+	width: 1180px;
+	height: auto;
+}
+
 .container {
 	background: no-repeat center center fixed;
 	background-size: auto;
@@ -65,6 +71,7 @@ h3, #aboutme {
 	height: auto;
 	margin: 0 auto;
 	z-index: 1;
+	padding-right: 8px;
 }
 
 /*
@@ -115,6 +122,11 @@ img.flip {
 	float: right;
 }
 
+/* Intro */
+hr {
+	margin-bottom: 20px;
+}
+
 /*
 					Footer
 													*/
@@ -149,7 +161,7 @@ img.flip {
 #about2 {margin: 0 auto; text-align: center;}
 #about1 {width:100vw; float:left; font-size: 25px; padding-bottom: 30px}
 
-.aboutmain {margin-top: 200px;}
+.paragraphAbout {width: 80%;}
 
 .contact {
 	width: 100vw;
@@ -319,7 +331,8 @@ input, textarea {
 #subhead {float: left;}
 
 #portrait {float:left;
-			margin-right:10px;}
+			margin-left: 20px;
+			margin-right:50px;}
 
 #skills {margin-left: 37px;}
 
@@ -654,7 +667,7 @@ section.containPhead {
 
 @media screen and (max-width: 523px) {
 	.image-slider-wrapper {
-	    height: 300px;
+	    height: 210px;
 	}
 }
 
@@ -664,23 +677,32 @@ section.containPhead {
 		padding-right: 30px;
 		display: inline;
 	}
+	.paragraphAbout {
+		width: 480px;
+	}
 }
 
 @media screen and (max-width: 498px) {
 	.image-slider-wrapper {
-	    height: 295px;
+	    height: 215px;
 	}
 }
 
 @media screen and (max-width: 485px) {
 	.image-slider-wrapper {
-	    height: 288px;
+	    height: 208px;
+	}
+	.paragraphAbout {
+		width: 470px;
 	}
 }
 
 @media screen and (max-width: 469px) {
 	.image-slider-wrapper {
-	    height: 280px;
+	    height: 205px;
+	}
+	.paragraphAbout {
+		width: 450px;
 	}
 }
 
@@ -690,7 +712,25 @@ section.containPhead {
 		padding-right: 30px;
 	}
 	.image-slider-wrapper {
-			height: 275px;
+			height: 185px;
+	}
+	.paragraphAbout {
+		width: 430px;
+	}
+}
+
+@media screen and (max-width: 437px) {
+	.paragraphAbout {
+		width: 410px;
+	}
+}
+
+@media screen and (max-width: 415px) {
+	.paragraphAbout {
+		width: 400px;
+	}
+	.portrait {
+		margin-right: 20px
 	}
 }
 
@@ -707,6 +747,10 @@ section.containPhead {
 
 	.container {
 		flex-direction: row
+	}
+
+	.paragraphAbout {
+		width: 390px;
 	}
 
 	/* #about1, #about2 {
@@ -730,6 +774,9 @@ section.containPhead {
 	#logo img {
 		height: auto;
 		width: 45px;
+	}
+	.portrait {
+		margin-right: 15px
 	}
 
 }
