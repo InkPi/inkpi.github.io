@@ -58,12 +58,6 @@ h3, #aboutme {
 	margin-top: 20px;
 }
 
-.aboutMainC {
-	margin: 0 auto;
-	width: 1180px;
-	height: auto;
-}
-
 .container {
 	background: no-repeat center center fixed;
 	background-size: auto;
@@ -402,6 +396,7 @@ section.containPhead {
 }
 
 .github {
+	background-color: silver;
 	padding: 20px 0% 20px 2%;
 	margin-bottom: 15px;
 	width: 100vw;
@@ -659,7 +654,7 @@ section.containPhead {
 
 @media screen and (max-width: 523px) {
 	.image-slider-wrapper {
-	    height: 210px;
+	    height: 300px;
 	}
 }
 
@@ -669,32 +664,23 @@ section.containPhead {
 		padding-right: 30px;
 		display: inline;
 	}
-	.paragraphAbout {
-		width: 480px;
-	}
 }
 
 @media screen and (max-width: 498px) {
 	.image-slider-wrapper {
-	    height: 215px;
+	    height: 295px;
 	}
 }
 
 @media screen and (max-width: 485px) {
 	.image-slider-wrapper {
-	    height: 208px;
-	}
-	.paragraphAbout {
-		width: 470px;
+	    height: 288px;
 	}
 }
 
 @media screen and (max-width: 469px) {
 	.image-slider-wrapper {
-	    height: 205px;
-	}
-	.paragraphAbout {
-		width: 450px;
+	    height: 280px;
 	}
 }
 
@@ -704,25 +690,7 @@ section.containPhead {
 		padding-right: 30px;
 	}
 	.image-slider-wrapper {
-			height: 185px;
-	}
-	.paragraphAbout {
-		width: 430px;
-	}
-}
-
-@media screen and (max-width: 437px) {
-	.paragraphAbout {
-		width: 410px;
-	}
-}
-
-@media screen and (max-width: 415px) {
-	.paragraphAbout {
-		width: 400px;
-	}
-	.portrait {
-		margin-right: 20px
+			height: 275px;
 	}
 }
 
@@ -739,10 +707,6 @@ section.containPhead {
 
 	.container {
 		flex-direction: row
-	}
-
-	.paragraphAbout {
-		width: 390px;
 	}
 
 	/* #about1, #about2 {
@@ -766,9 +730,6 @@ section.containPhead {
 	#logo img {
 		height: auto;
 		width: 45px;
-	}
-	.portrait {
-		margin-right: 15px
 	}
 
 }
