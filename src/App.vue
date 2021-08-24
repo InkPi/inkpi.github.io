@@ -1,56 +1,64 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+  <div id="app">
+    <router-view class="home"></router-view>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld />
-    </v-main>
-  </v-app>
+    <!-- <expandable-image
+      class="image"
+      src="https://images.unsplash.com/photo-1550948537-130a1ce83314?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2552&q=80"
+      alt="dog"
+      title="dog"
+    /> -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+//import Portfolio from "./views/PortfolioBody.vue";
+//import ExpandableImage from "../ExpandableImage";
 
 export default {
   name: "App",
-
   components: {
-    HelloWorld
+    //HelloWorld,
+    //ExpandableImage,
+    //"portfolio-body": Portfolio,
   },
-
-  data: () => ({
-    //
-  })
+  beforeCreate: function() {
+    document.body.className = "home";
+  }
 };
 </script>
+
+<style>
+* {
+  margin: 0 auto;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+
+  /* For Expandable Image */
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  max-width: 100%;
+  margin: 50px auto;
+  position: relative; */
+}
+
+.home a {
+  text-decoration: none;
+}
+
+/* For Expandable Image */
+.image {
+  width: 400px;
+  max-width: 100%;
+}
+</style>
