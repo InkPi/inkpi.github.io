@@ -1,4 +1,5 @@
 <template>
+  <!-- for package server "build": "webpack --mode production", -->
   <div id="portfolioBody">
     <HeaderTop />
     <img src="../assets/portribbon.png" />
@@ -7,36 +8,47 @@
     <div class="image-popup-no-margins">
       <div class="experiment"></div>
 
-      <a v-for="link in links.slice().reverse()" :key="link.linkId">
-        <!-- ^^ :href="link.linkHref" -->
-        <!-- <div :style="link.styleCss"></div> -->
+      <modal-template
+        v-if="modalVisible"
+        :value="modalVisible"
+        :link="modalData"
+      ></modal-template>
 
-        <!-- hover over @mouseover and @mouseleave
-            those @event create glitch effects when hovered + links were unclickable
-        -->
+      <a v-for="link in links.slice().reverse()" :key="link.linkId">
         <div :style="link.styleCss" :class="'port' + link.linkId"></div>
 
-        <div
-          v-if="link.github"
-          :style="link.styleCss"
-          :class="'top' + link.linkId"
-        >
-          <a :href="link.dataContent1"><p class="linkSpace">Online View</p></a>
-          <a :href="link.dataContent2"><p class="linkSpace">Github Repo</p></a>
+        <div class="modalParent">
+          <div
+            v-if="link.github"
+            :style="link.styleCss"
+            :class="'top' + link.linkId"
+          >
+            <a :href="link.dataContent1"><p class="linkSpace">Online View</p></a>
+            <a :href="link.dataContent2"><p class="linkSpace">Github Repo</p></a>
 
-          <p v-if="link.collabComment">* collaboration project</p>
-          <p v-if="link.oldComment" style="color: rgba(255,255,255,.7)">* Old portfolio site</p>
+            <p v-if="link.collabComment">* collaboration project</p>
+            <p v-if="link.oldComment" style="color: rgba(255,255,255,.7)">
+              * Old portfolio site
+            </p>
+          </div>
+
+        <!--10/4-->
+          <div
+            v-if="link.staticImg"
+            :style="link.styleCss"
+            id="modalBttn"
+            :class="'modalBttn' + link.linkId"
+            @click="openModal(link)"
+          >
+            <p>link#{{link.linkId}}</p>
+          </div>
         </div>
 
-        <div v-if="link.staticImg" :style="link.styleCss" id="modalBttn">
-          <!-- <a href="@/assets/static/acs.pdf"><div :style="link.styleCss"></div></a> -->
-        </div>
-
+        <!--This I believe was my attempt at modal for a different approach-->
         <div id="myModal" class="modal">
-
           <div class="modal-content">
             <div class="modal-header">
-             <span class="close">&times;</span>
+              <span class="close">&times;</span>
               <h2>Modal Header</h2>
             </div>
             <div class="modal-body">
@@ -47,62 +59,21 @@
               <h3>Modal Footer</h3>
             </div>
           </div>
-
         </div>
       </a>
-      <!-- <div>
-        <div
-          :style="link.styleCss"
-          :class="'port' + link.linkId"
-          @mouseover="link.hover = true"
-          @mouseleave="link.hover = false"
-        ></div>
-        <div
-          v-if="link.hover && link.github"
-          :style="link.styleCss"
-          :class="'top' + link.linkId"
-        >
-       -->
     </div>
   </div>
 </template>
 
 <script>
-/* WebAPI: need .onload ()
- * otherwise: Uncaught TypeError: Cannot set property 'onclick' of null [duplicate]
- */
-window.onload = function() {
-  //Modal
-  var modal = document.getElementById("myModal");
-
-  var btnDiv = document.getElementById("modalBttn");
-
-  var span = document.getElementsByClassName("close")[0];
-  // When the user clicks the button, open the modal
-  btnDiv.onclick = function() {
-    modal.style.display = "block";
-  };
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  };
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-};
-
-//import ExpandableImage from '../../ExpandableImage'
 import HeaderTop from "../components/HeaderTop";
+import modalTemplate from "../components/ModalPort.vue";
 
 export default {
   name: "portfolioBody",
   components: {
-    HeaderTop
+    HeaderTop,
+    "modal-template": modalTemplate
   },
   data() {
     return {
@@ -110,113 +81,156 @@ export default {
       links: [
         {
           linkId: 1,
-          linkHref: "../assets/960_grid_16_col3d.jpg",
+          linkHref: "https://drive.google.com/file/d/1F3rhLH7D7CiPxK_phrq65DNjzIr6w1Ki/preview?usp=sharing",
           styleCss: {
             width: "320px",
             height: "300px",
             float: "left"
           },
+          width: "90%",
+          height: "900px",
           github: false,
-          staticImg: true
+          staticImg: true,
+          title: "ACS Internship",
+          parag: "Interned at ACS, an certified education facility."
         },
         {
           linkId: 2,
-          linkHref: "../assets/typo2webfinal2.pdf",
+          linkHref: "https://drive.google.com/file/d/18bYDb21dLgoOoJe-R2REARrl77e0_Yes/preview?usp=sharing",
           styleCss: {
             width: "320px",
             height: "300px",
             float: "left"
           },
+          width: "90%",
+          height: "900px",
           github: false,
-          staticImg: true
+          staticImg: true,
+          title: "Escape Velocity",
+          parag: "Magazine design on an article featuring studies of how penguins' speed in water came to be."
         },
         {
           linkId: 3,
-          linkHref: "../assets/seniorinformationc_icon.jpg",
+          linkHref: require("../assets/increasedtemp.jpg"),
           styleCss: {
             width: "320px",
             height: "600px",
             float: "right"
           },
+          width: "80%",
+          height: "auto",
           github: false,
-          staticImg: true
+          staticImg: true,
+          title: "Ocean Damage Graph Chart",
+          parag: "A chart displaying the cause and effects of"
         },
         {
           linkId: 4,
-          linkHref: "../assets/bud.pdf",
+          linkHref:
+            "https://drive.google.com/file/d/1D1p7f71Yrhe3RWPjlN7Yi0IoEBAoICrn/preview?usp=sharing",
           styleCss: {
             width: "320px",
             height: "300px",
             float: "left"
           },
+          width: "90%",
+          height: "900px",
           github: false,
-          staticImg: true
+          staticImg: true,
+          title: "Ear bud packaging",
+          parag: "Product design of a pair of ear buds"
         },
         {
           linkId: 5,
-          linkHref: "../assets/WalkingSkyscrapers.jpg",
+          linkHref: require("../assets/WalkingSkyscrapers.jpg"),
           styleCss: {
             width: "320px",
             height: "300px",
             float: "left"
           },
+          width: "80%",
+          height: "auto",
+          modalWidth: this.staticWidth,
           github: false,
-          staticImg: true
+          staticImg: true,
+          title: "Poster",
+          parag: "Typography Poster"
         },
         {
           linkId: 6,
-          linkHref: "../assets/CBI2.jpg",
+          linkHref: require("../assets/CBI2.jpg"),
           styleCss: {
             width: "640px",
             height: "300px",
             float: "left"
           },
+          width: "80%",
+          height: "auto",
           github: false,
-          staticImg: true
+          staticImg: true,
+          title: "CBI Website Redesign",
+          parag: "Another site I worked on and redesigned their pages as part of my internship."
         },
         {
           linkId: 7,
-          linkHref: "../assets/dragon.jpg",
+          linkHref: require("../assets/dragon.jpg"),
           styleCss: {
             width: "320px",
             height: "300px",
             float: "left"
           },
+          width: "80%",
+          height: "auto",
           github: false,
-          staticImg: true
+          staticImg: true,
+          title: "PhotoShop Manipulation",
+          parag: "Manipulation of various smoke to form a dragon in photoshop."
         },
         {
           linkId: 8,
-          linkHref: "../assets/SakuraMatsuri.jpg",
+          linkHref: require("../assets/SakuraMatsuri.jpg"),
           styleCss: {
             width: "320px",
             height: "300px",
             float: "left"
           },
+          width: "30%",
+          height: "auto",
           github: false,
-          staticImg: true
+          staticImg: true,
+          title: "Event Poster",
+          parag: "Manipulation of various smoke to form a dragon in photoshop."
         },
         {
           linkId: 9,
-          linkHref: "../assets/lionhungryB.pdf",
+          linkHref: "https://drive.google.com/file/d/1QMcBIm3sqUSLGW1ybFRpGQgL2D3jVzVh/preview?usp=sharing",
           styleCss: {
             width: "320px",
             height: "600px",
             float: "left"
           },
+          width: "90%",
+          height: "900px",
           github: false,
-          staticImg: true
+          staticImg: true,
+          title: "Website Design for an Art Museum",
+          parag: "A redesign of an existing website: wowhuh.com."
         },
         {
           linkId: 10,
-          linkHref: "../assets/typo2maggridsb.pdf",
+          linkHref:
+            "https://drive.google.com/file/d/1Z3DSeuOyvqSf47uZZMCcEE0-PhKmCP5b/preview?usp=sharing",
           styleCss: {
             width: "640px",
             height: "300px",
             float: "right"
           },
+          width: "90%",
+          height: "900px",
           github: false,
-          staticImg: true
+          staticImg: true,
+          title: "Children Book Illustration",
+          parag: "Made pages"
         },
         {
           linkId: 11,
@@ -231,7 +245,9 @@ export default {
           dataContent1: "https://inkpi.github.io/",
           github: true,
           staticImg: false,
-          oldComment: true
+          oldComment: true,
+          title: "Original Portfolio page",
+          parag: "Prev"
         },
         {
           linkId: 12,
@@ -245,7 +261,9 @@ export default {
           hover: false,
           dataContent1: "https://inkpi.github.io/rpgGame/",
           github: true,
-          staticImg: false
+          staticImg: false,
+          title: "RPG Game",
+          parag: "A role play type game I made where you play as psychotic person who believes everyone is being controlled by none human's cute appearance and must kill as many as you could before being killed by them."
         },
         {
           linkId: 13,
@@ -262,7 +280,9 @@ export default {
           dataContent1: "https://inkpi.github.io/28th-glitch-GithubPgs/",
           github: true,
           staticImg: false,
-          collabComment: true
+          collabComment: true,
+          title: "Glitchy Text",
+          parag: "Created a glictchy paragraph"
         }
       ],
       alertText: "* to be fixed",
@@ -270,48 +290,18 @@ export default {
       onlineViewLinks: [],
       //direct github code
       githubLinks:
-        "<a href='https://inkpi.github.io/28th-glitch-GithubPgs/'>github page</a>"
+        "<a href='https://inkpi.github.io/28th-glitch-GithubPgs/'>github page</a>",
+      modalVisible: false,
+      modalData: null
     };
+  },
+  methods: {
+    openModal(data) {
+      console.log("open modal");
+      this.modalData = data;
+      this.modalVisible = true;
+    }
   }
-  // methods: {
-  //   applyHoverLinks() {
-  //     let nodeId = "hoverLinks";
-  //     //do I need this?
-  //     let style = document.createElement(nodeId);
-  //     if (!style) {
-  //       style = document.createElement("style");
-  //       style.id = nodeId;
-  //       style.type = "text/css";
-  //       //append style node as child of current component
-  //       this.$el.appendChild(style);
-  //     }
-
-  //     let cssRule = `
-  //       .{ 'port' + link.linkId }:after {
-  //         content: attr(data-content);
-  //         color:#fff;
-  //         position:absolute;
-  //         width:100%; height:100%;
-  //         top:0; left:0;
-  //         background:rgba(0,0,0,0.6);
-  //         opacity:0;
-  //         transition: all 0.5s;
-  //         -webkit-transition: all 0.5s;
-  //       }
-
-  //       .{ 'port' + link.linkId }:hover:after {
-  //         opacity:1;
-  //       }
-  //     `;
-  //     style.innerHTML = cssRule;
-  //   },
-  //   mounted: function() {
-  //     this.applyHoverLinks();
-  //   },
-  //   beforeUpdate: function() {
-  //     this.applyHoverLinks();
-  //   }
-  // }
 };
 </script>
 
@@ -320,6 +310,29 @@ export default {
   width: 960px;
   margin: 0px auto;
 }
+
+.port1,
+.port2,
+.port3,
+.port4,
+.port5,
+.port6,
+.port7,
+.port8,
+.port9,
+.port10,
+.port11,
+.port12,
+.port13 {
+  z-index: -1;
+}
+
+#modalBttn {
+  z-index: 2;
+  position: absolute;
+}
+
+.modalBttn3 {}
 
 .port1 {
   position: relative;
@@ -384,60 +397,66 @@ export default {
   opacity: 0.5;
 }
 
-/* .port13 img {
-  width: 100%;
-  vertical-align: top;
-} */
-
-/* .port13:after {
-  
-  //This hover to change different image!
-  //I want actual link text to go there
-   
-  content: attr(v-html);
-  color: #fff;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-} */
-
 .port13:hover:after {
   opacity: 1;
 }
 
+.modalParent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  position: absolute;
+}
+
 .top11,
 .top12,
-.top13 {
+.top13,
+#modalBttn {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
   /* top: -300px; */
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  display: block;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.top11:hover,
+.top12:hover,
+.top13:hover,
+#modalBttn:hover {
+  opacity: 1;
+}
+
+.modalBttn1 { grid-area: 6 / 2 / 7 / 3; }
+.modalBttn2 { grid-area: 6 / 1 / 7 / 2; }
+.modalBttn3 { grid-area: 5 / 3 / 7 / 4; }
+.modalBttn4 { grid-area: 5 / 2 / 6 / 3; }
+.modalBttn5 { grid-area: 5 / 1 / 6 / 2; }
+.modalBttn6 { grid-area: 4 / 2 / 5 / 4; }
+.modalBttn7 { grid-area: 3 / 3 / 4 / 4; }
+.modalBttn8 { grid-area: 3 / 2 / 4 / 3; }
+.modalBttn9 { grid-area: 3 / 1 / 5 / 2; }
+.modalBttn10 { grid-area: 2 / 2 / 3 / 4; }
+
+.top11 { grid-area: 2 / 1 / 3 / 2; }
+.top12 { grid-area: 1 / 3 / 2 / 4; }
+.top13 { grid-area: 1 / 1 / 2 / 3; }
+
+/* #modalBttn {
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
   padding: 0px;
   margin: 0px;
   position: absolute;
   display: block;
   opacity: 0;
   transition: opacity 1s;
-}
-
-.top12 {
-  right: 240px;
-}
-
-.top11 {
-  top: 425px;
-}
-
-.top11:hover,
-.top12:hover,
-.top13:hover {
-  opacity: 1;
-}
+} */
 
 .linkSpace {
   color: white;
