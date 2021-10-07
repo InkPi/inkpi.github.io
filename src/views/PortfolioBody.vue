@@ -33,12 +33,13 @@
           </div>
 
         <!--10/4-->
+        <!--   Modal Click     -->
           <div
             v-if="link.staticImg"
             :style="link.styleCss"
             id="modalBttn"
             :class="'modalBttn' + link.linkId"
-            @click="openModal(link)"
+            @click="showModal = true"
           >
             <p>link#{{link.linkId}}</p>
           </div>
@@ -285,6 +286,7 @@ export default {
           parag: "Created a glictchy paragraph"
         }
       ],
+      // change: showModal: true,
       alertText: "* to be fixed",
       //Make "Github Pages" for online or Jekyll for more complicated and ambitous ones
       onlineViewLinks: [],
@@ -295,13 +297,7 @@ export default {
       modalData: null
     };
   },
-  methods: {
-    openModal(data) {
-      console.log("open modal");
-      this.modalData = data;
-      this.modalVisible = true;
-    }
-  }
+  showModal: true
 };
 </script>
 

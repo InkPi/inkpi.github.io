@@ -1,13 +1,13 @@
 <template>
   <div id="modal-template">
     <template>
-      <div class="modal" v-show="value" id="modalid">
+      <div class="modal" v-show="value" id="modalid" v-if="showModal">
         <div class="container">
           <div class="modal__title" style="color:white">{{ link.title }} modal title</div>
           <p>{{ link.parag }}</p>
           <i
             class="fas fa-times"
-            @click.prevent="close"
+            @click.prevent="showModal = false"
             style="color:white"
           ></i>
           <embed
@@ -31,17 +31,12 @@ export default {
     link: {
       required: true
     }
-  },
-  data() {
-    return {
-      showModal: false
-    };
-  },
-  methods: {
-    close() {
-      this.$emit("input", !this.value);
-    }
   }
+  // methods: {
+  //   close() {
+  //     this.$emit("input", !this.value);
+  //   }
+  // }
 };
 </script>
 
@@ -55,6 +50,6 @@ export default {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease-out;
 }
 </style>
